@@ -46,7 +46,7 @@ class MigrateCommand extends BaseCommand {
     /**
      * {@inheritDoc}
      */
-    public function fire()
+    public function handle()
     {
         if ( ! $this->confirmToProceed())
         {
@@ -54,7 +54,7 @@ class MigrateCommand extends BaseCommand {
         }
 
         // The pretend option can be used for "simulating" the migration and grabbing
-        // the SQL queries that would fire if the migration were to be run against
+        // the SQL queries that would handle if the migration were to be run against
         // a database for real, which is helpful for double checking migrations.
         $pretend = $this->input->getOption('pretend');
 
